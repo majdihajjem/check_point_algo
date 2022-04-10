@@ -1,24 +1,24 @@
 ALGORITHM check_point_algo1
 VAR
     i,voyelle : INTEGER;
-    leng : INTEGER := 1;
+    leng : INTEGER := 0;
     words: INTEGER:= 1;
     my_sentnece : string;
+    c : char;
+    fin:boolean =false;
 BEGIN
-    Read(my_sentnece);
+
     REPEAT
-        IF (my_sentnece[i]=".") THEN
+        Read(c);
+        my_sentnece:=my_sentnece+"c";
+        leng:=leng+1;
+        IF (c=".") THEN
             fin=True;
-        ELSE
-            i:=i+1;
-            leng:=leng+1;
         END_IF
-    UNTIL (fin=True)
-    FOR i FROM 0 TO leng STEP step  DO
-        IF (my_sentnece[i]=" ") THEN
+        IF (c=" ") THEN
             words:=words+1;
         END_IF
-        SWITCH (i) DO
+        SWITCH (c) DO
             case "a" : voyelle:=voyelle+1;
             break;
             case "e" : voyelle:=voyelle+1;
@@ -34,7 +34,7 @@ BEGIN
             default :voyelle:=voyelle;
             break;
         END_SWITCH
-    END_FOR
+    UNTIL (fin=True)
     Write(leng);
     Write(words);
     Write(voyelle);
