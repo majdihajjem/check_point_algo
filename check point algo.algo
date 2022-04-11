@@ -31,6 +31,18 @@ BEGIN
             break;
             case "y" : voyelle:=voyelle+1;
             break;
+            case "A" : voyelle:=voyelle+1;
+            break;
+            case "E" : voyelle:=voyelle+1;
+            break;
+            case "I" : voyelle:=voyelle+1;
+            break;
+            case "O" : voyelle:=voyelle+1;
+            break;
+            case "U" : voyelle:=voyelle+1;
+            break;
+            case "Y" : voyelle:=voyelle+1;
+            break;
             default :voyelle:=voyelle;
             break;
         END_SWITCH
